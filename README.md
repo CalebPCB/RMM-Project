@@ -6,7 +6,7 @@
 <h2>⚙️ <strong>Technical Stack</strong></h2>
 
 <h3><strong>Backend & API</strong></h3>
-<p>FastAPI handles all reporting and inventory endpoints. PostgreSQL (hosted on AWS RDS) stores system and user inventory data.</p>
+<p>The API code is pulled from GitHub and deployed using Ansible, which also provisions two EC2 instances in different availability zones and configures an Application Load Balancer for high availability. The PostgreSQL database runs on AWS RDS with a multi-master setup featuring 2 writers and 2 readers to ensure fault tolerance and scalability.</p>
 
 <h3><strong>Agent</strong></h3>
 <p>A Python-based desktop app (Tkinter) runs on each client, collecting and reporting system metrics.</p>
@@ -21,3 +21,10 @@
   <li>Deploys the FastAPI app to both instances</li>
   <li>Pulls source code from GitHub and starts the server in a screen session for persistence</li>
 </ul>
+<div style="display: flex; align-items: center; gap: 10px;">
+  <img src="https://raw.githubusercontent.com/CalebPCB/RMM-Project/main/projectimg/sysinfo.png" alt="Sysinfo">
+  <img src="https://raw.githubusercontent.com/CalebPCB/RMM-Project/main/projectimg/inventory.png" alt="Inventory">
+</div>
+
+<img src="https://raw.githubusercontent.com/CalebPCB/RMM-Project/main/projectimg/pgdb.png" alt="PGDB Image">
+
