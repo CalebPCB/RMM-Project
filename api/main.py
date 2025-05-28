@@ -20,7 +20,6 @@ engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
-### EXISTING MODEL ###
 class SystemInfo(Base):
     __tablename__ = "system_info"
 
@@ -34,7 +33,6 @@ class SystemInfo(Base):
     ip = Column(String)
     created_at = Column(DateTime, default=datetime.utcnow)
 
-### NEW MANUAL INVENTORY MODEL ###
 class ManualInventory(Base):
     __tablename__ = "manual_inventory"
 
@@ -50,7 +48,6 @@ class ManualInventory(Base):
 
 Base.metadata.create_all(bind=engine)
 
-### Pydantic Models ###
 class SystemInfoIn(BaseModel):
     user_id: str
     hostname: str
