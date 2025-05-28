@@ -1,0 +1,12 @@
+aws_region: us-east-1
+ami_id: ami-0953476d60561c955  # Replace with your AMI ID
+instance_type: t2.micro
+ec2_key: rmmkey           # Replace with your key name
+subnet_id: subnet-02fcc07fc50713a86
+alb_subnets:
+  - subnet-01fc5c5de06ec4db3
+  - subnet-02fcc07fc50713a86
+security_group: sg-0d9fc8f4eead8f197
+vpc_id: vpc-058d7a592dd81b607
+rmm_backend_name: RmmBackend
+backup_name: Backup
