@@ -18,7 +18,7 @@
 <ul>
   <li>Provisions two EC2 instances in separate AWS availability zones</li>
   <li>Sets up an Application Load Balancer (ALB) to distribute traffic across the servers</li>
-  <li>Deploys the FastAPI app to both instances</li>
+  <li>Installs dependencies then deploys the FastAPI app to both instances</li>
   <li>Pulls source code from GitHub and starts the server in a screen session for persistence</li>
 </ul>
 <div style="display: flex; align-items: center; gap: 10px;">
